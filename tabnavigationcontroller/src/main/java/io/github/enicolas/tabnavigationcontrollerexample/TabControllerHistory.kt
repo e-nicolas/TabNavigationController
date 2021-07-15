@@ -12,7 +12,7 @@ internal class TabControllerHistory: Serializable {
 		get() = stack.isNotEmpty()
 
 	val size: Int
-	get() = stack.size
+		get() = stack.size
 
 	/**
 	 * Add a new tabIndex to stack
@@ -28,7 +28,7 @@ internal class TabControllerHistory: Serializable {
 		var entry = -1
 		if (isNotEmpty) {
 			stack.removeAt(stack.size - 1)
-			entry = stack[stack.size-1]
+			entry = stack[stack.size - 1]
 		}
 		return entry
 	}
