@@ -22,13 +22,13 @@ internal class TabControllerHistory: Serializable {
 	}
 
 	/**
-	 * Remove and return the last tabIndex from stack
+	 * Remove the last tabIndex from stack and return the previous one
 	 */
 	fun popPrevious(): Int {
 		var entry = -1
 		if (isNotEmpty) {
-			entry = stack[stack.size - 2]
-			stack.removeAt(stack.size - 2)
+			stack.removeAt(stack.size - 1)
+			entry = stack[stack.size-1]
 		}
 		return entry
 	}
